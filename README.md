@@ -11,8 +11,7 @@
 - 
 
 ## Live Demo (if available)
-
-[Live Demo Link](https://livedemo.com)
+ [on progress...]
 
 ## Getting Started
 - Make sure you have node installed on your local machine.
