@@ -1,0 +1,25 @@
+button {
+  border: none;
+  background-color: rgb(239, 238, 245);
+  font-size: 18px;
+  color: rgb(27, 26, 26);
+  cursor: pointer;
+  border-radius: 10px;
+  outline: none;
+}
+
+button:hover {
+  background-color: rgb(171, 172, 172);
+}
+
+button:nth-child(17) {
+  grid-column: 1/3;
+}
+
+button:nth-last-child(4),
+button:nth-last-child(1),
+button:nth-last-child(8),
+button:nth-last-child(12),
+button:nth-last-child(16) {
+  background-color: rgb(236, 141, 53);
+}
