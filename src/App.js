@@ -1,7 +1,7 @@
 import React from 'react';
 import './App.css';
-import Button from './Calculator/Button';
-import Screen from './Calculator/Screen';
+import Calculator from './Component/Calculator';
+import Screen from './Component/Screen';
 import ButtonCard from './UI/ButtonCard';
 /* eslint-disable react/destructuring-assignment */
 /* eslint-disable react/no-array-index-key */
@@ -29,7 +29,7 @@ class App extends React.Component {
         <ButtonCard>
           {
             btnValues.flat().map((btn, i) => (
-              <Button key={i} value={btn} />
+              <Calculator key={i} valueBtn={btn} />
             ))
           }
         </ButtonCard>
