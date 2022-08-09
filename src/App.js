@@ -1,29 +1,42 @@
-import logo from './logo.svg';
+import React from 'react';
 import './App.css';
+import Calculator from './Component/Calculator';
+import Screen from './Component/Screen';
+import ButtonCard from './UI/ButtonCard';
+/* eslint-disable react/destructuring-assignment */
+/* eslint-disable react/no-array-index-key */
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit
-          {' '}
-          <code>src/App.js</code>
-          {' '}
-          and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+const btnValues = [
+  ['AC', '+/-', '%', '÷'],
+  ['7', '8', '9', 'x'],
+  ['4', '5', '6', '-'],
+  ['1', '2', '3', '+'],
+  ['0', '.', '='],
+];
+
+class App extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      value: '0',
+    };
+  }
+
+  render() {
+    return (
+      <div className="card">
+        <Screen value={this.state.value} />
+        <ButtonCard>
+          {
+            btnValues.flat().map((btn, i) => (
+              <Calculator key={i} valueBtn={btn} />
+            ))
+          }
+        </ButtonCard>
+      </div>
+
+    );
+  }
 }
 
 export default App;
