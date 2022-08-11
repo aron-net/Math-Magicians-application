@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './App.css';
 import Calculator from './Component/Calculator';
 
@@ -15,39 +15,27 @@ const btnValues = [
   ['0', '.', '='],
 ];
 
-class App extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      total: null,
-      next: null,
-      operation: null,
-    };
-  }
-
-  clickHandler = (event) => {
-    const newState = calculate(this.state, event);
-    this.setState((previousState) => ({
-      ...previousState,
+const App = () => {
+  const [state, setState] = useState({ total: null, next: null, operation: null });
+  const clickHandler = (event) => {
+    const newState = calculate(state, event);
+    setState((prevState) => ({
+      ...prevState,
       ...newState,
     }));
   };
-
-  render() {
-    return (
-      <div className="card">
-        <div className="screen">{this.state.next || this.state.total || 0}</div>
-        <ButtonCard>
-          {
-            btnValues.flat().map((btn, i) => (
-              <Calculator clickHandler={this.clickHandler} key={i} valueBtn={btn} />
-            ))
-          }
-        </ButtonCard>
-      </div>
-
-    );
-  }
-}
+  return (
+    <div className="card">
+      <div className="screen">{state.next || state.total || 0 }</div>
+      <ButtonCard>
+        {
+          btnValues.flat().map((btn, i) => (
+            <Calculator clickHandler={clickHandler} key={i} valueBtn={btn} />
+          ))
+        }
+      </ButtonCard>
+    </div>
+  );
+};
 
 export default App;
