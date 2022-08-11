@@ -5,18 +5,16 @@ import PropTypes from 'prop-types';
 /* eslint-disable react/prop-types */
 /* eslint-disable react/prefer-stateless-function */
 
-class Calculator extends React.Component {
-  clickHandler = () => {
-    const { valueBtn } = this.props;
-    this.props.clickHandler(valueBtn);
-  }
+const Calculator = (props) => {
+  const clickHandler = () => {
+    const { valueBtn } = props;
+    props.clickHandler(valueBtn);
+  };
 
-  render() {
-    return (
-      <button type="button" onClick={this.clickHandler}>{this.props.valueBtn}</button>
-    );
-  }
-}
+  return (
+    <button type="button" onClick={clickHandler}>{props.valueBtn}</button>
+  );
+};
 
 Calculator.propTypes = {
   valueBtn: PropTypes.string.isRequired,
