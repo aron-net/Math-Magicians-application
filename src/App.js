@@ -1,7 +1,8 @@
 import React from 'react';
 import './App.css';
 import Calculator from './Component/Calculator';
-import Screen from './Component/Screen';
+
+import calculate from './logic/calculate';
 import ButtonCard from './UI/ButtonCard';
 /* eslint-disable react/destructuring-assignment */
 /* eslint-disable react/no-array-index-key */
@@ -18,18 +19,28 @@ class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      value: '0',
+      total: null,
+      next: null,
+      operation: null,
     };
   }
+
+  clickHandler = (event) => {
+    const newState = calculate(this.state, event);
+    this.setState((previousState) => ({
+      ...previousState,
+      ...newState,
+    }));
+  };
 
   render() {
     return (
       <div className="card">
-        <Screen value={this.state.value} />
+        <div className="screen">{this.state.next || this.state.total || 0}</div>
         <ButtonCard>
           {
             btnValues.flat().map((btn, i) => (
-              <Calculator key={i} valueBtn={btn} />
+              <Calculator clickHandler={this.clickHandler} key={i} valueBtn={btn} />
             ))
           }
         </ButtonCard>

@@ -23,3 +23,11 @@ button:nth-last-child(12),
 button:nth-last-child(16) {
   background-color: rgb(236, 141, 53);
 }
+
+button:nth-last-child(4):hover,
+button:nth-last-child(1):hover,
+button:nth-last-child(8):hover,
+button:nth-last-child(12):hover,
+button:nth-last-child(16):hover {
+  background-color: rgb(100, 100, 100);
+}

@@ -11,3 +11,18 @@
   left: 0;
   right: 0;
 }
+
+.screen {
+  height: 80px;
+  width: 100%;
+  margin-bottom: 15px;
+  padding: 5px 10px;
+  background-color: #8c989e2d;
+  border-radius: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  color: rgb(17, 16, 16);
+  font-weight: bold;
+  box-sizing: border-box;
+}
