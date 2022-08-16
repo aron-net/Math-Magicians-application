@@ -1,14 +1,14 @@
 .container {
-    padding: 0px 25px;
+  padding: 0 25px;
 }
 
 .header {
-    display: flex;
-    justify-content: space-between;
+  display: flex;
+  justify-content: space-between;
 }
 
 h1 {
-    padding: 0px 25px;
-    font-size: 40px;
-    font-family: 'Open Sans', sans-serif;
+  padding: 0 25px;
+  font-size: 40px;
+  font-family: 'Open Sans', sans-serif;
 }

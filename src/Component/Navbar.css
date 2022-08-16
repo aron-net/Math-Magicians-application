@@ -1,17 +1,17 @@
 .nav-link {
-    width: 25%;
-    align-items: center;
-    display: flex;
-    gap: 20px;
+  width: 25%;
+  align-items: center;
+  display: flex;
+  gap: 20px;
 }
 
 .nav {
-    text-decoration: none;
-    width: 20%;
-    height: 2vh;
-    border-right: 4px solid #212020;
+  text-decoration: none;
+  width: 20%;
+  height: 2vh;
+  border-right: 4px solid #212020;
 }
 
 .nav:last-child {
-    border: none;
+  border: none;
 }
