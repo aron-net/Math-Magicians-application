@@ -1,0 +1,14 @@
+.home {
+  padding: 10px 15px;
+}
+
+h2 {
+  font-size: 28px;
+  font-family: 'Open Sans', sans-serif;
+}
+
+.text {
+  width: 95%;
+  font-size: 18px;
+  line-height: 40px;
+}

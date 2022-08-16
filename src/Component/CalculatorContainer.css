@@ -1,0 +1,40 @@
+.container-calculator {
+  height: 70vh;
+  display: flex;
+  justify-content: space-between;
+}
+
+.header-Cal {
+  font-size: 25px;
+  font-family: 'Open Sans', sans-serif;
+  padding: 2px 20px;
+}
+
+.ar {
+  width: 30%;
+  padding: 60px 10px;
+}
+
+.card {
+  width: 350px;
+  height: 540px;
+  padding: 10px;
+  border-radius: 20px;
+  background-color: rgba(189, 201, 216, 0.5);
+  margin: auto 0;
+}
+
+.screen {
+  height: 80px;
+  width: 100%;
+  margin-bottom: 15px;
+  padding: 5px 10px;
+  background-color: #8c989e2d;
+  border-radius: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  color: rgb(17, 16, 16);
+  font-weight: bold;
+  box-sizing: border-box;
+}

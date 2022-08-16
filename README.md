@@ -11,7 +11,9 @@
 - 
 
 ## Live Demo (if available)
-[Live Demo Link](https://aron-helu.github.io/Math-Magicians-application/)
+
+ [Live Demo Link](https://aron-helu.github.io/Math-Magicians-application/)
+
 
 ## Getting Started
 - Make sure you have node installed on your local machine.
