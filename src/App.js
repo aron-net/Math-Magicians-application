@@ -1,41 +1,24 @@
-import React, { useState } from 'react';
+import React from 'react';
+import { Routes, Route } from 'react-router-dom';
 import './App.css';
-import Calculator from './Component/Calculator';
+import Home from './Component/Home';
+import Navbar from './Component/Navbar';
+import CalculatorContainer from './Component/CalculatorContainer';
+import Quote from './Component/Quote';
+/* eslint-disable arrow-body-style */
 
-import calculate from './logic/calculate';
-import ButtonCard from './UI/ButtonCard';
-/* eslint-disable react/destructuring-assignment */
-/* eslint-disable react/no-array-index-key */
-
-const btnValues = [
-  ['AC', '+/-', '%', '÷'],
-  ['7', '8', '9', 'x'],
-  ['4', '5', '6', '-'],
-  ['1', '2', '3', '+'],
-  ['0', '.', '='],
-];
-
-const App = () => {
-  const [state, setState] = useState({ total: null, next: null, operation: null });
-  const clickHandler = (event) => {
-    const newState = calculate(state, event);
-    setState((prevState) => ({
-      ...prevState,
-      ...newState,
-    }));
-  };
-  return (
-    <div className="card">
-      <div className="screen">{state.next || state.total || 0 }</div>
-      <ButtonCard>
-        {
-          btnValues.flat().map((btn, i) => (
-            <Calculator clickHandler={clickHandler} key={i} valueBtn={btn} />
-          ))
-        }
-      </ButtonCard>
+const App = () => (
+  <div className="container">
+    <div className="header">
+      <h1>Math Magicians</h1>
+      <Navbar />
     </div>
-  );
-};
+    <Routes>
+      <Route path="/" element={<Home />} />
+      <Route path="/calculator" element={<CalculatorContainer />} />
+      <Route path="/quotes" element={<Quote />} />
+    </Routes>
+  </div>
+);
 
 export default App;

@@ -1,0 +1,17 @@
+@import url('https://fonts.googleapis.com/css2?family=Alumni+Sans+Pinstripe:ital@1&family=Open+Sans:wght@600&display=swap');
+
+.quote {
+    padding: 40px 20px;
+    margin: auto;
+    width: 65%;
+}
+
+q {
+    font-size: 45px;
+    font-family: 'Alumni Sans Pinstripe', sans-serif;
+}
+
+small {
+    font-size: 20px;
+    padding: 2px 15px;
+}
