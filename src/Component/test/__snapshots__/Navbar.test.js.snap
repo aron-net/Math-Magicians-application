@@ -1,0 +1,30 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`render correctly 1`] = `
+<div
+  className="nav-link"
+>
+  <a
+    aria-current="page"
+    className="nav active"
+    href="/"
+    onClick={[Function]}
+  >
+    Home
+  </a>
+  <a
+    className="nav"
+    href="/calculator"
+    onClick={[Function]}
+  >
+    Calculator
+  </a>
+  <a
+    className="nav"
+    href="/quotes"
+    onClick={[Function]}
+  >
+    Quotes
+  </a>
+</div>
+`;
