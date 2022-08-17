@@ -2,6 +2,6 @@ import renderer from 'react-test-renderer';
 import Home from '../Home';
 
 it('render correctly', () => {
-    const tree = renderer.create(<Home />).toJSON();
-    expect(tree).toMatchSnapshot();
+  const tree = renderer.create(<Home />).toJSON();
+  expect(tree).toMatchSnapshot();
 });
